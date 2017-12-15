@@ -1,0 +1,32 @@
+{% import "../data/data.html" as list %}
+<header class="header">
+	<a class="header__logo" href="#"><img src="./././img/logo.png"></a>
+	<ul class="header__nav" id="menu">
+		{% for item in list.menu %}
+			<li class="header__list_item">
+				<a class="header__list_link" href="#">{{item.link}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<div class="header__account clearfix" id="account">
+		<div class="header__account-bag">
+			<a class="header__account_link" href="#">Bag</a>
+			<a class="header__account-bag_index" href="#">3</a>
+		</div>
+		<div class="header__account_line"></div>
+		<ul class="header__account-registration">
+			<li class="header__account_list header__account_list-border">
+				<a class="header__account_link" href="#">Login</a>
+			</li>
+			<li class="header__account_list">
+				<a class="header__account_link" href="#">Sign up</a>
+			</li>
+		</ul>
+	</div>
+	<a class="header__menu-bars" id="btn" href="javascript:void(0);" onclick="menuFunction()">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+</header>

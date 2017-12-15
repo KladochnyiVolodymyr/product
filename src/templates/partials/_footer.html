@@ -1,0 +1,21 @@
+{% import "../data/data.html" as list %}
+<footer class="footer">
+	<div class="container">
+		<p class="footer__text">We thought</p>
+		<h2 class="footer__title">You might like these too...</h2>
+		<div class="footer_wrapper">
+			{% for item in list.products %}
+				<div class="footer__item">
+					<a class="footer__item_link" href="#">
+						<img class="footer__item_img" src="{{item.item_img}}">
+						<div class="footer__item_description">
+							<h3 class="footer__item_name">{{item.item_name}}</h3>
+							<span class="footer__item_price">{{item.item_price}}</span>
+							<span class="footer__item_category">{{item.item_category}}</span>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</footer>

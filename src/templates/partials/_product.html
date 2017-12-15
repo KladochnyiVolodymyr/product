@@ -1,0 +1,42 @@
+{% import "../data/data.html" as list %}
+<div class="product">
+	<div class="container">
+		<div class="product__gallery clearfix">
+			<a href="#">
+				<img class="product__gallery_main-img" src="./././img/bag-main.png">
+			</a>
+			<div class="product__gallery_small-img">
+				{% for item in list.images %}
+					<a href="#"><img class="product__gallery_img" src="{{item.img}}"></a>
+				{% endfor %}
+			</div>
+		</div><div class="product__description">
+			<span class="product__chapter">
+				<i class="fa fa-mars product__chapter_mars" aria-hidden="true"></i><a class="product__chapter_link" href="#">Men Clothes</a><i class="fa fa-angle-right product__chapter_angel" aria-hidden="true"></i><a class="product__chapter_link" href="#">Coat & Jacket</a>
+			</span>
+			<h1 class="product__title">Lightweight nylon knitweat in black</h1>
+			<span class="product__price">$48.00</span>
+			<h3 class="product__description_title">Description</h3>
+			<p class="product__description_text">Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum. Cras efficitur iaculis sapien, vel tincidunt magna egestas at, vel tincidunt magna egestas at cras effcitur.</p>
+			<p class="product__description_text">Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum. </p>
+			<div class="product__colors">
+				<p class="product__colors_title">Colors</p>
+				<input type="radio" name="color" value="blue" id="blue">
+				<label class="product__colors_choice product__colors_choice_blue" for="blue">
+					<i class="fa fa-circle-thin product__colors_not-check" aria-hidden="true"></i>
+					<i class="fa fa-check-circle product__colors_check" aria-hidden="true"></i>
+					<i class="fa fa-stop fa-stop_blue" aria-hidden="true"></i>
+					Blue
+				</label>
+				<input type="radio" name="color" value="brown" id="brown" checked>
+				<label class="product__colors_choice" for="brown">
+					<i class="fa fa-circle-thin product__colors_not-check" aria-hidden="true"></i>
+					<i class="fa fa-check-circle product__colors_check" aria-hidden="true"></i>
+					<i class="fa fa-stop fa-stop_brown" aria-hidden="true"></i>
+					Brown
+				</label>
+			</div>
+			<a class="product__button" href="#">Buy now - $78</a>
+		</div>
+	</div>
+</div>

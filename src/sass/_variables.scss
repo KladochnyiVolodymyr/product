@@ -1,0 +1,17 @@
+
+$font__Georgia: "Georgia",sans-serif;
+$font__ptSans: "PT Sans", sans-serif;
+$text__color: #9197a3;
+
+@mixin transition ($properties){
+-webkit-transition: $properties;
+  -moz-transition: $properties;
+  	-o-transition: $properties;
+  		transition: $properties;
+}
+@mixin transform ($properties){
+-webkit-transform: $properties;
+  -moz-transform: $properties;
+  	-o-transform: $properties;
+  		transform: $properties;
+}

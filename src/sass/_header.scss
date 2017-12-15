@@ -1,0 +1,214 @@
+@import "./_variables.scss";
+
+/*-----header----------*/
+.header{
+	padding: 25px 35px;
+	box-shadow: 0 2px 9px rgba(189,189,189,.5);
+	position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.header__logo{
+	display: inline-block;
+	margin-right: 60px;
+}
+.header__menu-bars{
+	display: none;
+}
+.header__nav{
+	display: inline-block;
+	position: absolute;
+    top: 50%;
+    margin-top: -9px;
+}
+.header__list_item{
+	display: inline-block;
+	margin-right: 60px;
+}
+.header__list_link{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $text__color; 
+	font-family: $font__ptSans;
+	font-size: 11px;
+	font-weight: bold;
+	&:hover{color: #333743;}
+}
+.header__account_link{
+	opacity:1;
+	color: #333743; 
+	font-family: $font__ptSans;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	&:hover{opacity:.7;}
+}
+.header__account{
+	float: right;
+	margin-top: 5px;
+}
+.header__account-bag{
+	display: inline-block;
+	margin-right: 30px;
+}
+.header__account-bag_index{
+	text-decoration: none;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 5px 8px;
+    border-radius: 25px;
+	background-color: #333743;
+	font-family: $font__Georgia;
+	font-size: 11px;
+	margin-left: 15px;
+	display: inline-block;
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+}
+.header__account-registration{
+	display: inline-block;
+	margin-left: 15px;
+}
+.header__account_list{
+	display: inline-block;
+	padding-left: 15px;
+}
+.header__account_list-border:after{
+	content: "|";
+    font-size: 11px;
+    background-color: #000;
+    margin-left: 15px;
+}
+.header__account_line{
+	display: inline-block;
+    border-right: 1px solid #ddd;
+    height: 85px;
+    position: absolute;
+    top: 0px;
+}
+.header__menu-bars{
+  width: 35px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+  @include transform (rotate(0deg));
+  @include transition (.5s ease-in-out);
+  	span{
+  		display: block;
+  		position: absolute;
+  		height: 5px;
+  		width: 100%;
+  		background: #000;
+  		border-radius: 9px;
+  		opacity: 1;
+  		left: 0;
+  		@include transform (rotate(0deg));
+  		@include transition(.25s ease-in-out);
+  	}
+  	span:nth-child(1){
+  		top: 0px;
+  	}
+  	span:nth-child(2){
+  		top: 13px;
+  	}
+  	span:nth-child(3){
+  		top: 13px;
+  	}
+  	span:nth-child(4){
+  		top: 26px;
+  	}
+
+}
+.header__menu-bars.open {
+	span:nth-child(1) {
+  		top: 18px;
+  		width: 0%;
+  		left: 50%;
+	}
+	span:nth-child(2){
+		@include transform(rotate(45deg));
+	}
+	span:nth-child(3){
+		@include transform(rotate(-45deg));
+	}
+	span:nth-child(4){
+		top: 18px;
+  		width: 0%;
+  		left: 50%;
+	}
+}
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+    .container{
+		width: 970px;
+	}
+}
+@media screen and (max-width: 993px) and (min-width: 769px) {
+	.container{
+		width: 750px;
+	}
+	.header__list_item{
+		margin-right: 30px;
+	}
+}
+@media screen and (max-width: 769px) and (min-width: 320px) {
+	.container{
+		width: 100%;
+	}
+	.header__menu-bars{
+		display: inline-block;
+		position: absolute;
+    	top: 25px;
+    	right: 35px;
+	}
+	.header__nav{
+		display: none;
+		position: relative;
+		margin-top: 5px;
+		text-align: center;
+	}
+	.header__list_item{
+		display: block;
+		margin-top: 15px;
+		margin-right: 0px;
+	}
+	.header__list_link{
+		font-size: 16px;
+	}
+	.header__account{
+		display: none;
+		float: none;
+		text-align: center;
+		margin-top: 15px;
+	}
+	.header__account_link{
+		font-size: 16px;
+	}
+	.header__account_line{
+		display: none;
+	}
+	.header__account_list-border:after{
+		content: none;
+	}
+	.header__account-bag{
+		display: block;
+		margin-right: 0px;
+		margin-left: 42px;
+	}
+	.header__account-registration{
+		display: block;
+		margin-left: 0px;
+	}
+	.header__account_list{
+		display: block;
+		padding-left: 0px;
+		margin-top: 15px;
+	}
+	.responsive{
+    	display: block;
+	}
+
+}
+
+/*----- header-end ----------*/
