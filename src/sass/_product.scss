@@ -10,30 +10,59 @@
 .container{
 	width: 1200px;
 	margin: 0 auto;
+	@include r(1200){
+		width: 970px;
+	}
+	@include r(993){
+		width: 750px;
+	}
+	@include r(769){
+		width: 100%;
+	}
 }
 .product{
 	padding-top: 135px;
+	@include r(993){
+		text-align: center;
+	}
 }
 .product__gallery{
 	display: inline-block;
 	width: 50%;
+	@include r(1200){
+		text-align: center;
+	}
+	@include r(993){
+		width: 80%;
+	}
 }
 .product__gallery_small-img{
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 16px;
 	float: left;
+	@include r(1200){
+		float: none;
+		margin-top: 15px;
+		margin-right: 0px;
+	}
 }
 .product__gallery_img{
 	display: block;
 	margin-bottom: 12px;
+	@include r(1200){
+		display: inline-block;
+		margin-right: 15px;
+	}
 }
 .product__description{
 	@extend .product__gallery;
-}
-.product__description{
+	float: right;
 	text-align: center;
 	vertical-align: top;
+	@include r(993){
+		float: none;
+	}
 }
 .product__chapter{
 	font-family: $font__Georgia;
@@ -54,6 +83,9 @@
 	margin: auto;
 	line-height: 1.5;
 	text-transform: uppercase;
+	@include r(480){
+		width: 90%;
+	}
 }
 .product__chapter_mars{
 	margin-right: 7px;
@@ -109,7 +141,10 @@ input[type=radio]:checked + label .product__colors_not-check{
 	margin-right: 10px;
 }
 .product__colors{
-	margin: 50px 0px 75px 50px;
+	margin: 50px 0px 55px 50px;
+	@include r(769){
+		margin: 50px 0px 75px 0px;
+	}
 }
 .product__colors_choice{
 	display: block;
@@ -118,9 +153,18 @@ input[type=radio]:checked + label .product__colors_not-check{
 	font-family: $font__Georgia;
 	font-size: 13px;
 	margin-bottom: 17px;
+	@include r(993){
+		display: inline-block;
+	}
 }
 .product__colors_choice_blue{
 	color: #333743;
+	@include r(993){
+		margin-right: 100px;
+	}
+	@include r(480){
+		margin-right: 20px;
+	}
 }
 .product__colors_title{
 	color: #333743;
@@ -133,6 +177,17 @@ input[type=radio]:checked + label .product__colors_not-check{
     border-bottom: 1px solid #dbdde5;
     padding-bottom: 10px;
     width: 30%;
+    @include r(993){
+    	width: 90%;
+		text-align: center;
+    }
+    @include rmin(769){
+    	margin-left: 0px;
+    }
+    @include r(480){
+    	width: 100%;
+    	margin-left: 0px;
+    }
 }
 .product__button{
 	text-decoration: none;
@@ -144,89 +199,19 @@ input[type=radio]:checked + label .product__colors_not-check{
 	padding: 20px 180px;
 	display: inline-block;
 	&:hover{opacity:0.9;}
-}
-
-@media screen and (max-width: 1200px) and (min-width: 320px) {
-	.product__gallery_img{
-		display: inline-block;
-		margin-right: 15px;
-	}
-	.product__gallery{
-		text-align: center;
-	}
-	.product__gallery_small-img{
-		float: none;
-		margin-top: 15px;
-		margin-right: 0px;
-	}
-}
-@media screen and (max-width: 993px) and (min-width: 320px) {
-	.product{
-		text-align: center;
-	}
-	.product__gallery{
-		width: 80%;
-	}
-	.product__colors_title{
-		width: 90%;
-		text-align: center;
-	}
-	.product__colors_choice{
-		display: inline-block;
-	}
-	.product__colors_choice_blue{
-		margin-right: 100px;
-	}
-}
-@media screen and (max-width: 769px) and (min-width: 320px) {
-	.container{
-		width: 100%;
-	}
-	.product__colors{
-		margin: 50px 0px 75px 0px;
-	}
-	.product__colors_choice{
-		display: inline-block;
-	}
-}
-@media screen and (max-width: 1200px) and (min-width: 993px) {
-    .container{
-		width: 970px;
-	}
-}
-@media screen and (max-width: 993px) and (min-width: 769px) {
-	.container{
-		width: 750px;
-	}
-	.product__colors_title{
-		margin-left: 0px;
-	}
-}
-@media screen and (max-width: 769px) and (min-width: 480px) {
-
-	.product__gallery_main-img{
-		width: 400px;
-	}
-	.product__button{
+	@include r(769){
 		padding: 20px 140px;
 	}
-}
-@media screen and (max-width: 480px) and (min-width: 320px) {
-	.product__gallery_main-img{
-		width: 100%;
-	}
-	.product__title{
-		width: 90%;
-	}
-	.product__colors_title{
-		width: 100%;
-		margin-left: 0px;
-	}
-	.product__colors_choice_blue{
-		margin-right: 20px;
-	}
-	.product__button{
+	@include r(480){
 		padding: 20px 79px;
+	}
+}
+.product__gallery_main-img{
+	@include r(769){
+		width: 400px;
+	}
+	@include r(480){
+		width: 100%;
 	}
 }
 
