@@ -9,7 +9,7 @@ function menuFunction() {
     menu.className = 'header__nav';
     account.className = 'header__account';
   }
-  var btn = document.getElementById('btn');
+  var btn = document.getElementById('responsive-menu');
   btn.classList.toggle('open');
 }
 module.exports = menuFunction;

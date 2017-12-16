@@ -1,3 +1,3 @@
 import menuFunction from './lib/responsive_menu.js';
 
-menuFunction();
+document.getElementById('responsive-menu').addEventListener('click', menuFunction);
