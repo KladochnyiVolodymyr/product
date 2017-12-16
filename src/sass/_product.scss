@@ -180,9 +180,10 @@ input[type=radio]:checked + label .product__colors_not-check{
     @include r(993){
     	width: 90%;
 		text-align: center;
+		margin-left: 0px;
     }
-    @include rmin(769){
-    	margin-left: 0px;
+    @include r(769){
+    	margin-left: 25px;
     }
     @include r(480){
     	width: 100%;
